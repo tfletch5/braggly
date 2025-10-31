@@ -15,7 +15,7 @@ const serviceOptions = [
   "Email Marketing",
   "SEO Optimization",
   "Chatbot Development",
-  "Ad Campaign Automation",
+  // "Ad Campaign Automation",
   "Business Automation",
   "Not Sure / Multiple Services",
 ];

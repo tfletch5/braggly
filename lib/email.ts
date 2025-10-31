@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendContactEmail(data: ContactFormData) {
   const emailTo = process.env.EMAIL_TO || "support@braggly.com";
-  const emailFrom = process.env.EMAIL_FROM || "website@braggly.com";
+  const emailFrom = process.env.EMAIL_FROM || "no-reply@updates.braggly.com";
 
   try {
     // Send notification to business owner

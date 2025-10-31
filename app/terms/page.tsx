@@ -43,7 +43,7 @@ export default function TermsPage() {
                 <li>Email marketing automation</li>
                 <li>SEO optimization</li>
                 <li>Chatbot development</li>
-                <li>Ad campaign automation</li>
+                {/* <li>Ad campaign automation</li> */}
                 <li>Business process automation</li>
               </ul>
               <p className="text-[var(--text-secondary)] mb-4">
