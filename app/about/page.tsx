@@ -1,33 +1,39 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { Target, Users, Zap, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Braggly | Your AI Marketing Partner",
-  description: "Learn about Braggly's mission to democratize AI-powered marketing for small businesses and startups.",
+  description:
+    "Learn about Braggly's mission to democratize AI-powered marketing for small businesses and startups.",
 };
 
 const values = [
   {
     icon: Zap,
     title: "Automation-First",
-    description: "We believe in leveraging AI to eliminate repetitive tasks and free up your time for strategic work.",
+    description:
+      "We believe in leveraging AI to eliminate repetitive tasks and free up your time for strategic work.",
   },
   {
     icon: Shield,
     title: "Transparency",
-    description: "No hidden fees, no surprises. We're upfront about what we can deliver and how we'll get there.",
+    description:
+      "No hidden fees, no surprises. We're upfront about what we can deliver and how we'll get there.",
   },
   {
     icon: Target,
     title: "Results-Driven",
-    description: "We measure success by your success. Every strategy is designed to deliver measurable ROI.",
+    description:
+      "We measure success by your success. Every strategy is designed to deliver measurable ROI.",
   },
   {
     icon: Users,
     title: "Client Success Focus",
-    description: "Your growth is our priority. We're not satisfied until you're seeing real business impact.",
+    description:
+      "Your growth is our priority. We're not satisfied until you're seeing real business impact.",
   },
 ];
 
@@ -159,8 +165,14 @@ export default function AboutPage() {
             <div className="rounded-xl bg-white p-8 shadow-sm">
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="flex-shrink-0">
-                  <div className="h-24 w-24 rounded-full bg-gradient-to-br from-[#0F52BA] to-[#3B82F6] flex items-center justify-center text-white text-3xl font-bold">
-                    TF
+                  <div className="h-24 w-24 rounded-full overflow-hidden">
+                    <Image
+                      src="/images/tony-headshot.jpg"
+                      alt="Tony Fletcher"
+                      width={96}
+                      height={96}
+                      className="object-cover w-full h-full"
+                    />
                   </div>
                 </div>
                 <div>
