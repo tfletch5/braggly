@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const benefits = [
-  "Free 30-minute consultation",
+  "See which of the 5 layers you're missing",
+  "Get a custom implementation roadmap",
   "No commitment required",
-  "Custom AI strategy for your business",
-  "Results in 30 days or less",
+  "Start with just the layers you need",
 ];
 
 export default function CTA() {
@@ -17,13 +17,13 @@ export default function CTA() {
           <div className="mx-auto max-w-3xl text-center text-white">
             {/* Headline */}
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-6">
-              Ready to Automate Your Success?
+              Not Sure Which Layer to Start With?
             </h2>
 
             {/* Subheadline */}
             <p className="text-lg mb-8 text-white/90 lg:text-xl">
-              Join 50+ small businesses that have transformed their marketing with AI automation.
-              Book your free consultation today and discover how we can help you scale.
+              Book a free marketing audit and we&apos;ll show you exactly which
+              layers your business is missing — and the fastest path to results.
             </p>
 
             {/* Benefits List */}
@@ -42,13 +42,14 @@ export default function CTA() {
               size="lg"
               className="bg-white text-[var(--primary)] hover:bg-white/90 text-lg"
             >
-              Book Your Free Consultation
+              Get Your Free Marketing Audit
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
 
             {/* Risk-free message */}
             <p className="mt-6 text-sm text-white/80">
-              No credit card required. No strings attached. Just a conversation about your goals.
+              No credit card required. No strings attached. Just a conversation
+              about your growth goals.
             </p>
           </div>
         </div>
