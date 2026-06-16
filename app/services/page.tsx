@@ -1,223 +1,149 @@
 import type { Metadata } from "next";
-import { Bot, Mail, MessageSquare, PenTool, Search, Target, Workflow } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Pen,
+  Share2,
+  MessageSquare,
+  Mail,
+  Gamepad2,
+  Check,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "AI Marketing Services | Braggly",
-  description: "Explore our comprehensive AI-powered marketing and automation services. From social media to SEO, we automate everything for small businesses.",
+  description:
+    "The 5-Layer AI Marketing Stack — from content creation to automated follow-up. Explore every layer of our AI-powered marketing system.",
 };
 
-const services = [
+const layers = [
   {
-    id: "social-media",
-    icon: MessageSquare,
-    title: "AI-Powered Social Media Automation",
+    id: "content-engine",
+    number: 1,
+    icon: Pen,
+    title: "Content Engine",
+    tagline: "Never stare at a blank screen again",
     description:
-      "Transform your social media presence with intelligent automation that works around the clock. Our AI systems handle everything from content creation to posting and engagement, ensuring your brand stays active and relevant across all platforms.",
+      "Our AI creates publish-ready first drafts for every channel — social captions, long-form blog posts, email newsletters, and ad copy — all in your brand voice. You review, approve, and we handle the rest.",
     features: [
-      "Automated content scheduling and posting across all major platforms",
-      "AI-generated captions, hashtags, and post copy that matches your brand voice",
-      "Multi-platform management (Instagram, LinkedIn, Twitter/X, Facebook, TikTok)",
-      "Performance analytics and automated reporting",
-      "Intelligent engagement responses and community management",
-      "Content calendar creation with optimal posting times",
-      "Competitor analysis and trend identification",
-      "Visual content recommendations and optimization",
+      "12–16 social posts per month (more at higher tiers)",
+      "Long-form blog posts and articles (1,000–3,000 words)",
+      "Ad copy for Google, Meta, and LinkedIn",
+      "Email newsletter and campaign copy",
+      "Brand voice calibration and consistency",
+      "Content calendar with weekly themes",
     ],
     benefits: [
-      "Save 15+ hours per week on social media management",
-      "Maintain consistent posting schedule without manual effort",
-      "Increase engagement rates by 40% on average",
-      "Never miss trending topics or opportunities",
-    ],
-    useCases: [
-      "E-commerce brands growing their audience",
-      "Service businesses building thought leadership",
-      "Startups establishing brand presence",
-      "Local businesses reaching community customers",
-    ],
-  },
-  {
-    id: "content-generation",
-    icon: PenTool,
-    title: "AI Content Generation",
-    description:
-      "Create high-quality, SEO-optimized content at scale with our advanced AI writing systems. From blog posts to ad copy, we generate content that resonates with your audience and drives results.",
-    features: [
-      "Long-form blog posts and articles (1000-3000 words)",
-      "Website copy and landing page content",
-      "Ad copy for Google, Facebook, and LinkedIn",
-      "Email newsletters and campaign content",
-      "Product descriptions and category pages",
-      "Social media post variations",
-      "SEO-optimized content with keyword integration",
-      "Brand voice customization and consistency",
-      "Content editing and refinement workflows",
-    ],
-    benefits: [
+      "Save 15+ hours per week on content creation",
       "Publish 10x more content in the same time",
       "Maintain consistent brand voice across all channels",
-      "Improve SEO rankings with optimized content",
-      "Reduce content creation costs by 70%",
+      "Reduce content costs by up to 70%",
     ],
-    useCases: [
-      "Content marketing campaigns",
-      "E-commerce product catalogs",
-      "Thought leadership and blog strategies",
-      "Multi-channel marketing campaigns",
-    ],
+    includedIn: "Launch, Grow, and Dominate",
   },
   {
-    id: "email-marketing",
-    icon: Mail,
-    title: "Email Marketing Automation",
+    id: "distribution-system",
+    number: 2,
+    icon: Share2,
+    title: "Distribution System",
+    tagline: "One batch session. Posts go out daily.",
     description:
-      "Build sophisticated email campaigns that nurture leads and drive conversions. Our automation systems create personalized experiences for every subscriber without manual intervention.",
+      "Creating content is only half the battle — it needs to reach your audience at the right time, on every platform. Our distribution system auto-schedules across LinkedIn, Instagram, Facebook, and Google Business so you batch once and stay visible all week.",
     features: [
-      "Automated welcome sequences for new subscribers",
-      "Behavioral trigger-based campaigns",
-      "Drip campaigns with smart segmentation",
-      "Personalization using customer data and AI",
-      "A/B testing for subject lines and content",
-      "Performance analytics and optimization",
-      "List management and hygiene automation",
-      "Professional template design",
-      "Integration with popular ESP platforms",
+      "Multi-platform auto-scheduling",
+      "Optimal posting time detection per platform",
+      "Hashtag and keyword strategy per channel",
+      "Graphics and visual asset formatting",
+      "Cross-posting with platform-native optimization",
+      "Monthly performance report with insights",
     ],
     benefits: [
-      "Increase email open rates by 30-50%",
-      "Automate lead nurturing workflows",
-      "Recover abandoned carts automatically",
-      "Build stronger customer relationships",
+      "Stay active on every platform without daily effort",
+      "Increase engagement with platform-optimized content",
+      "Never miss a posting window",
+      "Compound your brand visibility over time",
     ],
-    useCases: [
-      "E-commerce cart abandonment campaigns",
-      "SaaS onboarding and activation sequences",
-      "Lead nurturing for service businesses",
-      "Customer retention and upsell campaigns",
-    ],
+    includedIn: "Launch, Grow, and Dominate",
   },
   {
-    id: "seo",
-    icon: Search,
-    title: "SEO Optimization with AI",
+    id: "lead-capture",
+    number: 3,
+    icon: MessageSquare,
+    title: "Lead Capture",
+    tagline: "Qualify leads at 2 AM while you sleep",
     description:
-      "Dominate search rankings with AI-powered SEO strategies. We combine technical expertise with intelligent automation to improve your visibility and drive organic traffic.",
+      "Your content is working and people are visiting your website — but are you capturing them? Our AI chatbots greet every visitor, answer their questions, qualify them on the spot, and book them directly into your calendar. No form, no friction, no missed opportunities.",
     features: [
-      "Comprehensive keyword research and analysis",
-      "On-page SEO optimization",
-      "Content strategy and topic clustering",
-      "Technical SEO audits and fixes",
-      "Competitor analysis and gap identification",
-      "Link building strategies and outreach",
-      "Local SEO for local businesses",
-      "Performance tracking and reporting",
-      "Schema markup implementation",
-    ],
-    benefits: [
-      "Rank on page 1 for target keywords in 3-6 months",
-      "Increase organic traffic by 100-300%",
-      "Improve conversion rates from organic visitors",
-      "Build long-term sustainable traffic sources",
-    ],
-    useCases: [
-      "New websites building authority",
-      "Local businesses targeting local customers",
-      "E-commerce sites competing for product keywords",
-      "Service businesses attracting qualified leads",
-    ],
-  },
-  {
-    id: "chatbot",
-    icon: Bot,
-    title: "Chatbot Development",
-    description:
-      "Deploy intelligent AI chatbots that provide 24/7 customer support, qualify leads, and engage visitors. Our bots handle routine inquiries so your team can focus on high-value interactions.",
-    features: [
-      "AI-powered customer support chatbots",
-      "Lead qualification and routing",
-      "FAQ automation with natural language processing",
-      "Multi-channel deployment (website, WhatsApp, Facebook Messenger, SMS)",
-      "CRM and database integration",
-      "Appointment booking and scheduling",
-      "Product recommendations",
-      "Handoff to human agents when needed",
-      "Analytics and conversation insights",
+      "AI chatbot with natural language processing",
+      "24/7 lead qualification and routing",
+      "Smart FAQ handling and objection responses",
+      "Calendar integration for instant booking",
+      "Multi-channel deployment (website, Facebook Messenger, SMS)",
+      "Lead capture forms with landing page optimization",
     ],
     benefits: [
       "Handle 80% of inquiries automatically",
-      "Provide instant responses 24/7",
-      "Qualify leads before they reach sales",
-      "Reduce support costs by 60%",
+      "Qualify leads before they reach your sales team",
+      "Provide instant responses around the clock",
+      "Never let a warm lead go cold",
     ],
-    useCases: [
-      "E-commerce customer support",
-      "Lead generation for service businesses",
-      "Appointment booking (healthcare, salons, etc.)",
-      "FAQ automation for any business",
-    ],
+    includedIn: "Grow and Dominate",
   },
-  // {
-  //   id: "ad-campaigns",
-  //   icon: Target,
-  //   title: "Ad Campaign Automation",
-  //   description:
-  //     "Maximize your advertising ROI with AI-optimized campaigns. We automate bidding, targeting, and creative testing to ensure your ads perform at peak efficiency.",
-  //   features: [
-  //     "Google Ads campaign management and optimization",
-  //     "Facebook and Instagram ads",
-  //     "LinkedIn advertising for B2B",
-  //     "Automated bidding strategies",
-  //     "Ad creative testing and optimization",
-  //     "Audience targeting and segmentation",
-  //     "Campaign monitoring and adjustments",
-  //     "ROI tracking and attribution",
-  //     "Budget optimization across channels",
-  //   ],
-  //   benefits: [
-  //     "Improve ROI by 50-100% through optimization",
-  //     "Reduce cost per acquisition",
-  //     "Scale campaigns without increasing workload",
-  //     "Get better results with same budget",
-  //   ],
-  //   useCases: [
-  //     "E-commerce sales and retargeting",
-  //     "Lead generation campaigns",
-  //     "App install campaigns",
-  //     "Brand awareness initiatives",
-  //   ],
-  // },
   {
-    id: "business-automation",
-    icon: Workflow,
-    title: "Business Process Automation",
+    id: "nurture-sequences",
+    number: 4,
+    icon: Mail,
+    title: "Nurture Sequences",
+    tagline: "Turn cold leads into warm prospects — on autopilot",
     description:
-      "Streamline your operations with custom workflow automation. We eliminate repetitive tasks and create efficient systems that save time and reduce errors.",
+      "Not every lead is ready to buy today. Our automated email sequences keep you top-of-mind — educating, building trust, and moving prospects closer to a decision without you lifting a finger.",
     features: [
-      "Custom workflow automation design",
-      "CRM automation and optimization",
-      "Data entry and management automation",
-      "Reporting and analytics dashboards",
-      "Tool integration (Zapier, Make.com, custom APIs)",
-      "Invoice and payment processing",
-      "Inventory and order management",
-      "Document generation and management",
-      "Team notifications and alerts",
+      "5-email automated welcome sequence",
+      "Educational drip campaigns by segment",
+      "Re-engagement campaigns for cold leads",
+      "Behavioral trigger-based sequences",
+      "Lead scoring and segmentation",
+      "A/B testing for subject lines and content",
+      "Integration with major email platforms",
     ],
     benefits: [
-      "Save 20+ hours per week on admin tasks",
-      "Eliminate manual data entry errors",
-      "Improve team productivity and focus",
-      "Scale operations without hiring",
+      "Increase email open rates by 30–50%",
+      "Automate the entire lead nurturing process",
+      "Build trust through consistent value delivery",
+      "Recover leads that would otherwise be lost",
     ],
-    useCases: [
-      "Sales pipeline automation",
-      "Customer onboarding workflows",
-      "Inventory and order processing",
-      "Financial reporting and invoicing",
+    includedIn: "Grow and Dominate",
+  },
+  {
+    id: "follow-up-conversion",
+    number: 5,
+    icon: Gamepad2,
+    title: "Follow-Up & Conversion",
+    tagline: "The layer that closes the deal",
+    description:
+      "This is the layer most agencies don't even offer — and it's the one that matters most. AI-powered follow-up sequences combined with Braggly's proprietary branded Mini Games turn quotes and proposals into closed deals. Instead of another boring follow-up email, your prospect plays a 30-second game and unlocks savings on their quote.",
+    features: [
+      "🎮 Branded Mini Games for quote follow-up",
+      "AI-powered follow-up sequences",
+      "Real-time lead engagement notifications",
+      "Conversion rate optimization",
+      "Retargeting campaign setup (Meta/Google)",
+      "Weekly strategy calls",
+      "Priority support",
     ],
+    benefits: [
+      "Convert at 30–55% vs. 2–5% for standard follow-ups",
+      "Turn proposals into closed deals faster",
+      "Stand out from every other business in your market",
+      "Close more revenue without more leads",
+    ],
+    includedIn: "Dominate only",
   },
 ];
 
@@ -229,75 +155,111 @@ export default function ServicesPage() {
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              AI-Powered Services Built for Growth
+              The 5-Layer AI Marketing Stack
             </h1>
             <p className="text-lg text-white/90 lg:text-xl">
-              Comprehensive automation solutions tailored for small businesses and startups.
-              From strategy to execution, we handle it all.
+              Most agencies give you content and call it marketing. We build
+              all five layers — from first draft to closed deal — so your
+              business runs a complete marketing machine.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Details */}
+      {/* Layer Navigator */}
+      <section className="py-6 bg-white border-b border-[var(--border)] sticky top-0 z-10">
+        <div className="container-custom">
+          <div className="flex items-center gap-4 overflow-x-auto pb-2">
+            {layers.map((layer) => (
+              <a
+                key={layer.id}
+                href={`#${layer.id}`}
+                className="flex items-center gap-2 whitespace-nowrap rounded-full border border-[var(--border)] px-4 py-2 text-sm font-medium text-[var(--text-secondary)] hover:border-[var(--primary)] hover:text-[var(--primary)] transition-colors"
+              >
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[#0F52BA] to-[#3B82F6] text-white text-xs font-bold">
+                  {layer.number}
+                </span>
+                {layer.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Layer Sections */}
       <section className="py-20 bg-white">
         <div className="container-custom">
-          <div className="space-y-20">
-            {services.map((service, index) => {
-              const Icon = service.icon;
+          <div className="space-y-24">
+            {layers.map((layer, index) => {
+              const Icon = layer.icon;
               const isEven = index % 2 === 0;
 
               return (
                 <div
-                  key={service.id}
-                  id={service.id}
-                  className={`scroll-mt-24 ${index !== 0 ? "pt-20 border-t border-[var(--border)]" : ""}`}
+                  key={layer.id}
+                  id={layer.id}
+                  className={`scroll-mt-32 ${
+                    index !== 0
+                      ? "pt-24 border-t border-[var(--border)]"
+                      : ""
+                  }`}
                 >
                   <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
                     {/* Content */}
                     <div className={isEven ? "lg:order-1" : "lg:order-2"}>
-                      <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-[#0F52BA] to-[#3B82F6] text-white mb-6">
-                        <Icon className="h-8 w-8" />
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#0F52BA] to-[#3B82F6] text-white text-lg font-bold">
+                          {layer.number}
+                        </div>
+                        <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#0F52BA]/10 to-[#3B82F6]/10 text-[var(--primary)]">
+                          <Icon className="h-7 w-7" />
+                        </div>
                       </div>
 
-                      <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-                        {service.title}
+                      <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">
+                        {layer.title}
                       </h2>
-
-                      <p className="text-lg text-[var(--text-secondary)] mb-6">
-                        {service.description}
+                      <p className="text-base font-medium text-[var(--primary)] mb-4">
+                        {layer.tagline}
                       </p>
 
-                      <Button href="/contact" size="lg">
-                        Get Started
+                      <p className="text-lg text-[var(--text-secondary)] mb-6">
+                        {layer.description}
+                      </p>
+
+                      <p className="text-sm text-[var(--text-secondary)] mb-6">
+                        <span className="font-semibold text-[var(--text-primary)]">
+                          Included in:
+                        </span>{" "}
+                        {layer.includedIn}
+                      </p>
+
+                      <Button href="/pricing" size="lg">
+                        See Plans with Layer {layer.number}
                       </Button>
                     </div>
 
                     {/* Details Cards */}
-                    <div className={`space-y-6 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                    <div
+                      className={`space-y-6 ${
+                        isEven ? "lg:order-2" : "lg:order-1"
+                      }`}
+                    >
                       {/* Features */}
                       <Card>
                         <CardHeader>
-                          <CardTitle className="text-xl">Key Features</CardTitle>
+                          <CardTitle className="text-xl">
+                            What&apos;s Included
+                          </CardTitle>
                         </CardHeader>
                         <CardContent>
                           <ul className="space-y-2">
-                            {service.features.slice(0, 6).map((feature) => (
+                            {layer.features.map((feature) => (
                               <li
                                 key={feature}
                                 className="flex items-start gap-2 text-sm text-[var(--text-secondary)]"
                               >
-                                <svg
-                                  className="h-5 w-5 flex-shrink-0 text-[var(--success)] mt-0.5"
-                                  fill="currentColor"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
+                                <Check className="h-5 w-5 flex-shrink-0 text-[var(--success)] mt-0.5" />
                                 <span>{feature}</span>
                               </li>
                             ))}
@@ -308,11 +270,11 @@ export default function ServicesPage() {
                       {/* Benefits */}
                       <Card className="bg-[var(--background-light)] border-[var(--primary)]/20">
                         <CardHeader>
-                          <CardTitle className="text-xl">Benefits</CardTitle>
+                          <CardTitle className="text-xl">Results</CardTitle>
                         </CardHeader>
                         <CardContent>
                           <ul className="space-y-2">
-                            {service.benefits.map((benefit) => (
+                            {layer.benefits.map((benefit) => (
                               <li
                                 key={benefit}
                                 className="flex items-start gap-2 text-sm font-medium text-[var(--text-primary)]"
@@ -343,34 +305,51 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* How the Layers Work Together */}
       <section className="py-20 bg-[var(--background-light)]">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center mb-16">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] sm:text-4xl mb-4">
-              Our Proven Process
+              How the 5 Layers Work Together
             </h2>
             <p className="text-lg text-[var(--text-secondary)]">
-              From consultation to implementation, we ensure smooth delivery and exceptional results.
+              Each layer builds on the last. Together, they create a
+              self-reinforcing marketing machine.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-5">
-            {[
-              { step: "01", title: "Discovery", description: "Understand your goals and challenges" },
-              { step: "02", title: "Strategy", description: "Design custom AI automation plan" },
-              { step: "03", title: "Setup", description: "Configure tools and systems" },
-              { step: "04", title: "Launch", description: "Deploy and monitor performance" },
-              { step: "05", title: "Optimize", description: "Continuously improve results" },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#0F52BA] to-[#3B82F6] text-white text-xl font-bold">
-                  {item.step}
+          <div className="grid gap-4 md:grid-cols-5">
+            {layers.map((layer, index) => (
+              <div key={layer.id} className="relative text-center">
+                {/* Connector arrow */}
+                {index < layers.length - 1 && (
+                  <div className="hidden md:block absolute top-8 right-0 translate-x-1/2 text-[var(--primary)] z-10">
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        fillRule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                )}
+                <div className="mb-3 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#0F52BA] to-[#3B82F6] text-white text-xl font-bold">
+                  {layer.number}
                 </div>
-                <h3 className="font-bold text-[var(--text-primary)] mb-2">{item.title}</h3>
-                <p className="text-sm text-[var(--text-secondary)]">{item.description}</p>
+                <h3 className="font-bold text-[var(--text-primary)] text-sm mb-1">
+                  {layer.title}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)]">
+                  {layer.tagline}
+                </p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button href="/pricing" size="lg">
+              Choose Your Starting Layer
+            </Button>
           </div>
         </div>
       </section>
@@ -380,13 +359,18 @@ export default function ServicesPage() {
         <div className="container-custom">
           <div className="rounded-2xl bg-gradient-to-r from-[#0F52BA] via-[#3B82F6] to-[#60A5FA] p-8 lg:p-16 text-center text-white">
             <h2 className="text-3xl font-bold mb-4 sm:text-4xl">
-              Not Sure Which Service You Need?
+              Not Sure Which Layers You Need?
             </h2>
             <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
-              Book a free consultation and we'll help you identify the best automation solutions for your business.
+              Book a free audit and we&apos;ll show you which layers your
+              business is missing — and exactly where to start.
             </p>
-            <Button href="/contact" size="lg" className="bg-white text-[var(--primary)] hover:bg-white/90">
-              Schedule Your Free Consultation
+            <Button
+              href="/contact"
+              size="lg"
+              className="bg-white text-[var(--primary)] hover:bg-white/90"
+            >
+              Get Your Free Marketing Audit
             </Button>
           </div>
         </div>
