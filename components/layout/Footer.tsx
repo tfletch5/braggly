@@ -47,13 +47,12 @@ export default function Footer() {
                   Braggly
                 </span>
                 <span className="text-xs text-[var(--text-secondary)]">
-                  Your AI Concierge
+                  Your Digital Growth Partner
                 </span>
               </div>
             </Link>
             <p className="mt-4 text-sm text-[var(--text-secondary)]">
-              Empowering small businesses and startups with AI-powered marketing
-              automation. Transform your marketing, scale your business.
+              Helping businesses attract, capture, nurture, and recover customers with marketing, custom software, and automation.
             </p>
             <div className="mt-6 flex space-x-4">
               {socialLinks.map((social) => {
