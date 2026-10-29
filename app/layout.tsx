@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Braggly - Your AI Concierge for Digital Marketing & Automation",
+  title: "Braggly - Your Digital Growth Partner",
   description:
-    "Automate your marketing, scale your business. AI-powered digital marketing and automation solutions for small businesses and startups.",
+    "Turn your marketing into a growth system with digital marketing, custom software, and automation.",
   keywords: [
     "AI marketing",
     "marketing automation",
@@ -35,16 +35,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.braggly.com",
-    title: "Braggly - Your AI Concierge for Digital Marketing",
+    title: "Braggly - Your Digital Growth Partner",
     description:
-      "Automate your marketing, scale your business with AI-powered solutions.",
+      "Turn your marketing into a growth system with marketing, software, and automation.",
     siteName: "Braggly",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Braggly - Your AI Concierge",
+    title: "Braggly - Your Digital Growth Partner",
     description:
-      "AI-powered digital marketing and automation for small businesses.",
+      "Digital marketing, custom software, and automation for business growth.",
   },
 };
 
