@@ -13,18 +13,18 @@ export default function Hero() {
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm text-white backdrop-blur-sm">
             <Sparkles className="h-4 w-4" />
-            <span>Trusted by 50+ Small Businesses</span>
+            <span>Your Digital Growth Partner</span>
           </div>
 
           {/* Headline */}
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Your AI Concierge for Digital Marketing Excellence
+            Turn Your Marketing Into a Growth System.
           </h1>
 
           {/* Subheadline */}
           <p className="mb-8 text-lg text-white/90 sm:text-xl lg:text-2xl">
-            Automate your marketing, scale your business. AI-powered solutions
-            designed for small businesses and startups.
+            Attract more customers, capture more inquiries, nurture relationships,
+            and recover missed opportunities with marketing, automation, and custom software.
           </p>
 
           {/* CTA Buttons */}
@@ -39,7 +39,7 @@ export default function Hero() {
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]"
             >
-              Explore Our Services
+              Explore Our Growth Solutions
             </Button>
           </div>
 
@@ -61,7 +61,7 @@ export default function Hero() {
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
               </svg>
-              <span>Results in 30 days or less</span>
+              <span>We give you a reason to brag.</span>
             </div>
           </div>
         </div>
