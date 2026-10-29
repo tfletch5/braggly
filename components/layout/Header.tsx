@@ -32,7 +32,7 @@ export default function Header() {
                 Braggly
               </span>
               <span className="text-xs text-[var(--text-secondary)]">
-                Your AI Concierge
+                Your Digital Growth Partner
               </span>
             </div>
           </Link>
