@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: { icon: "/images/Bold%20Black%20Brushstroke%20B%20Logo.png", shortcut: "/images/Bold%20Black%20Brushstroke%20B%20Logo.png", apple: "/images/Bold%20Black%20Brushstroke%20B%20Logo.png" },
   title: "Braggly - Your Digital Growth Partner",
   description:
     "Turn your marketing into a growth system with digital marketing, custom software, and automation.",
