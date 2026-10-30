@@ -1,228 +1,75 @@
 import type { Metadata } from "next";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Pricing | Braggly AI Marketing Services",
-  description: "Transparent pricing for AI-powered marketing automation. Plans for every business size and budget.",
+  title: "Work With Us | Braggly Digital Growth Partner",
+  description: "Explore tailored digital growth partnerships, websites, custom software, and business automation. Book a consultation to discuss your goals.",
 };
 
-const tiers = [
+const engagements = [
   {
-    name: "Starter",
-    price: "$1,999",
-    period: "/month",
-    description: "Perfect for new startups and solopreneurs getting started with AI automation.",
-    features: [
-      "2-3 core automation services",
-      "Social media automation (2 platforms)",
-      "Basic email marketing setup",
-      "Monthly performance reports",
-      "Email support",
-      "Up to 10,000 AI-generated words/month",
-      "Strategy session (quarterly)",
-    ],
-    cta: "Get Started",
-    popular: false,
+    title: "Digital Growth Partnership",
+    description: "An ongoing partnership to attract the right customers, convert more opportunities, and improve your marketing performance.",
+    services: ["Digital marketing and content strategy", "SEO and local visibility", "Lead generation and conversion optimization", "Performance reporting and ongoing improvement"],
   },
   {
-    name: "Growth",
-    price: "$4,499",
-    period: "/month",
-    description: "For growing businesses ready to scale their marketing with comprehensive automation.",
-    features: [
-      "4-5 automation services",
-      "Full social media automation (all platforms)",
-      "Advanced email campaigns & segmentation",
-      "SEO optimization & content strategy",
-      "Chatbot implementation",
-      "Weekly performance reports",
-      "Priority support",
-      "Up to 30,000 AI-generated words/month",
-      "Strategy sessions (monthly)",
-      "A/B testing & optimization",
-    ],
-    cta: "Get Started",
-    popular: true,
+    title: "Website & Software Solutions",
+    description: "Digital experiences and custom technology built around how your business operates and grows.",
+    services: ["Website design and development", "Landing pages and conversion improvements", "Custom web and mobile applications", "Integrations and digital product development"],
   },
   {
-    name: "Scale",
-    price: "Custom",
-    period: "",
-    description: "Enterprise-level automation for established businesses scaling rapidly.",
-    features: [
-      "All services included",
-      "Unlimited platforms & channels",
-      "Custom workflow automation",
-      "Advanced analytics & dashboards",
-      "Dedicated account manager",
-      "Daily monitoring & optimization",
-      "24/7 priority support",
-      "Unlimited AI-generated content",
-      "Weekly strategy sessions",
-      "Custom integrations",
-      "White-label options available",
-    ],
-    cta: "Contact Sales",
-    popular: false,
-  },
-];
-
-const faqs = [
-  {
-    question: "How does pricing work?",
-    answer: "Our pricing is transparent and based on the scope of services you need. You pay a fixed monthly fee with no hidden costs. All plans include setup, implementation, and ongoing optimization.",
-  },
-  {
-    question: "Is there a minimum contract length?",
-    answer: "We offer flexible month-to-month plans. However, we recommend a minimum 3-month commitment to see significant results from AI automation.",
-  },
-  {
-    question: "Can I cancel anytime?",
-    answer: "Yes, you can cancel with 30 days notice. We believe in earning your business every month through results, not long-term contracts.",
-  },
-  {
-    question: "What's included in the setup?",
-    answer: "Setup includes strategy development, account configuration, content creation, automation workflows, integration with your existing tools, and initial testing. This is all included in your monthly fee.",
-  },
-  {
-    question: "Do you offer custom packages?",
-    answer: "Absolutely! If none of our standard tiers fit your needs, we can create a custom package tailored to your specific requirements and budget.",
-  },
-  {
-    question: "What if I need to add or remove services?",
-    answer: "You can adjust your services anytime. We'll prorate the charges and update your plan accordingly. Flexibility is key to our approach.",
+    title: "Automation & Business Systems",
+    description: "Connect your tools and streamline the work between first contact and loyal customer.",
+    services: ["CRM and lead capture workflows", "Email and SMS follow-up", "Scheduling and customer engagement", "Practical AI and workflow automation"],
   },
 ];
 
 export default function PricingPage() {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0F52BA] via-[#3B82F6] to-[#60A5FA] py-16 text-white">
+    <main>
+      <section className="bg-gradient-to-r from-[#0F52BA] via-[#3B82F6] to-[#60A5FA] py-20 text-white">
+        <div className="container-custom mx-auto max-w-4xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-widest">Ways to Work With Braggly</p>
+          <h1 className="mb-6 text-4xl font-bold sm:text-5xl">Let’s Build Your Growth Strategy</h1>
+          <p className="mx-auto max-w-2xl text-lg text-white/90">No one-size-fits-all packages. We learn where your business is today, identify the biggest growth opportunities, and recommend a solution built around your goals.</p>
+          <Link href="/contact" className="mt-8 inline-block rounded-lg bg-white px-7 py-3 font-semibold text-[#0F52BA] hover:bg-blue-50">Book a Growth Consultation</Link>
+        </div>
+      </section>
+      <section className="container-custom py-20">
+        <div className="mb-12 max-w-3xl">
+          <h2 className="mb-4 text-3xl font-bold">The right partnership for your next stage</h2>
+          <p className="text-lg text-[var(--text-secondary)]">Start with the business challenge. We’ll help you determine the right mix of strategy, marketing, technology, and automation.</p>
+        </div>
+        <div className="grid gap-8 lg:grid-cols-3">
+          {engagements.map((item) => (
+            <article key={item.title} className="rounded-2xl border border-[var(--border)] bg-white p-8 shadow-sm">
+              <h3 className="mb-4 text-2xl font-bold">{item.title}</h3>
+              <p className="mb-6 text-[var(--text-secondary)]">{item.description}</p>
+              <ul className="mb-8 space-y-3 text-sm">{item.services.map((service) => <li key={service} className="flex gap-2"><span aria-hidden="true" className="text-[#0F52BA]">✓</span>{service}</li>)}</ul>
+              <Link href="/contact" className="font-semibold text-[#0F52BA] hover:underline">Discuss your project →</Link>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="bg-[var(--background-light)] py-20">
         <div className="container-custom">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Transparent Pricing
-            </h1>
-            <p className="text-lg text-white/90 lg:text-xl">
-              Choose the plan that fits your business. No hidden fees, no surprises.
-              Scale up or down as your needs change.
-            </p>
+          <h2 className="mb-10 text-center text-3xl font-bold">How We Work Together</h2>
+          <div className="grid gap-8 md:grid-cols-4">
+            {[
+              ["01", "Discover", "We discuss your goals, challenges, customers, and existing systems."],
+              ["02", "Strategize", "We identify opportunities and recommend a focused plan."],
+              ["03", "Propose", "You receive a tailored scope, timeline, and price before committing."],
+              ["04", "Build & Optimize", "We implement, measure, and refine the work together."],
+            ].map(([number, title, detail]) => <div key={number}><p className="mb-3 text-xl font-bold text-[#0F52BA]">{number}</p><h3 className="mb-2 text-xl font-semibold">{title}</h3><p className="text-[var(--text-secondary)]">{detail}</p></div>)}
           </div>
         </div>
       </section>
-
-      {/* Pricing Tiers */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="grid gap-8 lg:grid-cols-3">
-            {tiers.map((tier) => (
-              <Card
-                key={tier.name}
-                className={`relative ${tier.popular ? "border-2 border-[var(--primary)] shadow-lg" : ""}`}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center rounded-full bg-gradient-to-br from-[#0F52BA] to-[#3B82F6] px-4 py-1 text-sm font-semibold text-white">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <CardHeader>
-                  <CardTitle className="text-2xl">{tier.name}</CardTitle>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold text-[var(--text-primary)]">
-                      {tier.price}
-                    </span>
-                    <span className="text-[var(--text-secondary)]">{tier.period}</span>
-                  </div>
-                  <p className="mt-4 text-sm text-[var(--text-secondary)]">
-                    {tier.description}
-                  </p>
-                </CardHeader>
-
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {tier.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2">
-                        <Check className="h-5 w-5 flex-shrink-0 text-[var(--success)] mt-0.5" />
-                        <span className="text-sm text-[var(--text-secondary)]">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Button
-                    href="/contact"
-                    className="w-full"
-                    variant={tier.popular ? "primary" : "outline"}
-                  >
-                    {tier.cta}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Additional Info */}
-          <div className="mt-12 text-center">
-            <p className="text-[var(--text-secondary)] mb-4">
-              All plans include a 15% discount when billed annually.
-            </p>
-            <p className="text-sm text-[var(--text-secondary)]">
-              Need something different?{" "}
-              <Link href="/contact" className="text-[var(--primary)] hover:underline font-medium">
-                Let's create a custom plan
-              </Link>{" "}
-              for your specific needs.
-            </p>
-          </div>
-        </div>
+      <section className="container-custom py-20 text-center">
+        <h2 className="mb-4 text-3xl font-bold">Let’s Build Your Growth System</h2>
+        <p className="mx-auto mb-8 max-w-2xl text-lg text-[var(--text-secondary)]">Tell us what you’re trying to achieve. We’ll explore the right approach and prepare a custom proposal if we’re a good fit.</p>
+        <Link href="/contact" className="inline-block rounded-lg bg-[#0F52BA] px-8 py-3 font-semibold text-white hover:bg-blue-700">Book a Growth Consultation</Link>
+        <p className="mt-8 text-sm text-[var(--text-secondary)]">Braggly — Your Digital Growth Partner. We give you a reason to brag.</p>
       </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-[var(--background-light)]">
-        <div className="container-custom">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-12 text-center">
-              Frequently Asked Questions
-            </h2>
-
-            <div className="space-y-6">
-              {faqs.map((faq) => (
-                <Card key={faq.question}>
-                  <CardHeader>
-                    <CardTitle className="text-lg">{faq.question}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-[var(--text-secondary)]">{faq.answer}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="rounded-2xl bg-gradient-to-r from-[#0F52BA] via-[#3B82F6] to-[#60A5FA] p-8 lg:p-16 text-center text-white">
-            <h2 className="text-3xl font-bold mb-4 sm:text-4xl">
-              Still Have Questions?
-            </h2>
-            <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
-              Book a free consultation and we'll help you find the perfect plan for your business.
-            </p>
-            <Button href="/contact" size="lg" className="bg-white text-[var(--primary)] hover:bg-white/90">
-              Schedule Free Consultation
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
+    </main>
   );
 }
